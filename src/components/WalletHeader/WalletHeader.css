@@ -1,0 +1,115 @@
+.wallet-header {
+  width: 100%;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  padding: 0 0 28px;
+}
+
+.wallet-header-title h1 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.wallet-header-title p {
+  margin: 7px 0 0;
+
+  color: #929bb2;
+
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.wallet-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.header-action,
+.header-icon-button {
+  border: 0;
+  background: transparent;
+
+  color: #c4cad8;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.header-action {
+  gap: 8px;
+
+  font-size: 13px;
+}
+
+.header-action:hover,
+.header-icon-button:hover {
+  color: #ffffff;
+}
+
+.header-action:hover svg,
+.header-icon-button:hover svg {
+  transform: rotate(10deg);
+}
+
+.header-icon-button {
+  width: 32px;
+  height: 32px;
+
+  position: relative;
+}
+
+.notification-dot {
+  position: absolute;
+
+  top: 5px;
+  right: 5px;
+
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: #b25cff;
+
+  box-shadow: 0 0 0 2px #10121c;
+}
+
+.header-profile {
+  margin-left: 2px;
+}
+
+.profile-avatar {
+  width: 36px;
+  height: 36px;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(135deg, #4c5368, #252b3c);
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  color: #ffffff;
+
+  font-size: 13px;
+  font-weight: 700;
+}

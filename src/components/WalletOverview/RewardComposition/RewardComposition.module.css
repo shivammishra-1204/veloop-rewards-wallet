@@ -1,0 +1,175 @@
+.card {
+  position: relative;
+  min-height: 295px;
+  padding: 20px 20px 18px;
+  border: 1px solid rgba(125, 137, 178, 0.25);
+  border-radius: 16px;
+  background: linear-gradient(
+    145deg,
+    rgba(29, 35, 62, 0.98),
+    rgba(25, 30, 53, 0.98)
+  );
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.025),
+    0 12px 35px rgba(0, 0, 0, 0.14);
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: rgba(133, 91, 255, 0.5);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #aeb8d8;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.titleGroup {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.titleGroup svg {
+  color: #c2c9e5;
+}
+
+.header > svg {
+  color: #8f99ba;
+}
+
+.rewardList {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  margin-top: 15px;
+}
+
+.rewardItem {
+  display: flex;
+  align-items: center;
+  min-height: 62px;
+  padding: 10px 13px;
+  border: 1px solid rgba(126, 139, 180, 0.12);
+  border-radius: 11px;
+  background: rgba(54, 61, 89, 0.38);
+}
+
+.iconBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+  border-radius: 50%;
+}
+
+.veIcon {
+  color: #ffd052;
+  background: rgba(255, 191, 47, 0.16);
+}
+
+.sveIcon {
+  color: #c7ccd8;
+  background: rgba(190, 197, 211, 0.15);
+}
+
+.rewardInfo {
+  display: flex;
+  flex-direction: column;
+  margin-left: 11px;
+}
+
+.rewardInfo strong {
+  color: #f4f5fa;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.rewardInfo span {
+  margin-top: 3px;
+  color: #8791b2;
+  font-size: 10px;
+}
+
+.amount,
+.amountSilver {
+  margin-left: auto;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.amount {
+  color: #f5c83d;
+}
+
+.amountSilver {
+  color: #d7dbe5;
+}
+
+.flow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+  margin-top: 19px;
+  color: #777f9f;
+}
+
+.flowItem {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #aab2ce;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.sveFlowIcon {
+  color: #aeb5c4;
+}
+
+.veFlowIcon {
+  color: #f5c93d;
+}
+
+.giftIcon {
+  color: #f05c9b;
+}
+
+.description {
+  margin: 9px 0 0;
+  text-align: center;
+  color: #858eae;
+  font-size: 10px;
+}
+
+@media (max-width: 700px) {
+  .flow {
+    gap: 6px;
+  }
+
+  .flowItem {
+    font-size: 9px;
+  }
+
+  .rewardInfo strong {
+    font-size: 12px;
+  }
+
+  .amount,
+  .amountSilver {
+    font-size: 15px;
+  }
+}

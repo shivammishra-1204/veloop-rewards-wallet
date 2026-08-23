@@ -1,0 +1,16 @@
+.app {
+  min-height: 100vh;
+  width: 100%;
+
+  background: #10121c;
+}
+
+.wallet-page {
+  margin-left: 155px;
+
+  min-height: 100vh;
+
+  padding: 30px 32px;
+
+  color: #ffffff;
+}
