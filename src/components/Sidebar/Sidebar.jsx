@@ -1,3 +1,4 @@
+import veloopLogo from '../../assets/veloop-logo-transparent.png'
 import {
   LayoutDashboard,
   Wallet,
@@ -16,7 +17,9 @@ function Sidebar() {
     <aside className="sidebar">
       {/* Brand */}
       <div className="sidebar-brand">
-        <div className="brand-logo">V</div>
+        <div className="brand-logo">
+          <img src={veloopLogo} alt="VELOOP" />
+        </div>
 
         <div className="brand-text">
           <span>VELOOP</span>

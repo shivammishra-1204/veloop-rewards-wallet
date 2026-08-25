@@ -29,19 +29,21 @@
 }
 
 .brand-logo {
-  width: 32px;
-  height: 32px;
+  width: 34px;
+  height: 34px;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  border: 2px solid #e7a82f;
-  border-radius: 8px;
+  flex-shrink: 0;
+}
 
-  color: #e7a82f;
-  font-size: 18px;
-  font-weight: 800;
+.brand-logo img {
+  width: 34px;
+  height: 34px;
+  display: block;
+  object-fit: contain;
 }
 
 .brand-text {
