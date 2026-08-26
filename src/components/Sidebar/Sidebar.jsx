@@ -1,4 +1,4 @@
-import veloopLogo from '../../assets/veloop-logo-transparent.png'
+import veloopLogo from "../../assets/veloop-logo-transparent.png";
 import {
   LayoutDashboard,
   Wallet,
@@ -28,49 +28,53 @@ function Sidebar() {
       </div>
 
       {/* Navigation */}
-      <nav className="sidebar-nav">
-        <a href="#" className="sidebar-link">
+      <nav className="sidebar-nav" aria-label="Main navigation">
+        <button type="button" className="sidebar-link">
           <LayoutDashboard size={20} />
           <span>Dashboard</span>
-        </a>
+        </button>
 
-        <a href="#" className="sidebar-link active">
+        <button
+          type="button"
+          className="sidebar-link active"
+          aria-current="page"
+        >
           <Wallet size={20} />
           <span>Wallet</span>
-        </a>
+        </button>
 
-        <a href="#" className="sidebar-link">
+        <button type="button" className="sidebar-link">
           <Gift size={20} />
           <span>Rewards</span>
-        </a>
+        </button>
 
-        <a href="#" className="sidebar-link">
+        <button type="button" className="sidebar-link">
           <Users size={20} />
           <span>Referrals</span>
-        </a>
+        </button>
 
-        <a href="#" className="sidebar-link">
+        <button type="button" className="sidebar-link">
           <History size={20} />
           <span>History</span>
-        </a>
+        </button>
 
-        <a href="#" className="sidebar-link">
+        <button type="button" className="sidebar-link">
           <User size={20} />
           <span>Profile</span>
-        </a>
+        </button>
 
-        <a href="#" className="sidebar-link">
+        <button type="button" className="sidebar-link">
           <Headphones size={20} />
           <span>Support</span>
-        </a>
+        </button>
       </nav>
 
       {/* Logout */}
       <div className="sidebar-bottom">
-        <a href="#" className="sidebar-link">
+        <button type="button" className="sidebar-link">
           <LogOut size={20} />
           <span>Logout</span>
-        </a>
+        </button>
       </div>
     </aside>
   )
