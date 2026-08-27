@@ -1,7 +1,12 @@
 import { Coins, Info, Gift, ArrowRight } from 'lucide-react'
 import styles from './RewardComposition.module.css'
+import useCountUp from '/src/hooks/useCountUp'
+import InfoTooltip from '/src/components/InfoTooltip/InfoTooltip'
 
 function RewardComposition() {
+  const animatedVEs = useCountUp(3850)
+  const animatedSVEs = useCountUp(1240)
+
   return (
     <section className={styles.card}>
       <div className={styles.header}>
@@ -10,7 +15,10 @@ function RewardComposition() {
           <span>REWARD COMPOSITION</span>
         </div>
 
-        <Info size={15} />
+        <InfoTooltip label="Reward composition information">
+          This section shows your VEs and SVEs balances and how they flow toward
+          eligible rewards.
+        </InfoTooltip>
       </div>
 
       <div className={styles.rewardList}>
@@ -20,12 +28,19 @@ function RewardComposition() {
             <Coins size={21} />
           </div>
 
-          <div className={styles.rewardInfo}>
+          <div className={styles.rewardName}>
             <strong>VEs (Value Earned)</strong>
-            <span>Primary reward currency</span>
+
+            <InfoTooltip label="VEs information">
+              VEs are the primary reward currency in VELOOP Rewards.
+            </InfoTooltip>
           </div>
 
-          <strong className={styles.amount}>3,850</strong>
+          <span>Primary reward currency</span>
+
+          <strong className={styles.amount}>
+            {animatedVEs.toLocaleString()}
+          </strong>
         </div>
 
         {/* SVE */}
@@ -34,12 +49,20 @@ function RewardComposition() {
             <Coins size={21} />
           </div>
 
-          <div className={styles.rewardInfo}>
+          <div className={styles.rewardName}>
             <strong>SVEs (Silver VEs)</strong>
-            <span>Secondary reward currency</span>
+
+            <InfoTooltip label="SVEs information">
+              SVEs are the secondary reward currency and can be converted into
+              VEs according to platform rules.
+            </InfoTooltip>
           </div>
 
-          <strong className={styles.amountSilver}>1,240</strong>
+          <span>Secondary reward currency</span>
+
+          <strong className={styles.amountSilver}>
+            {animatedSVEs.toLocaleString()}
+          </strong>
         </div>
       </div>
 

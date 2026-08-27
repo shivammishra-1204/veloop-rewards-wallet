@@ -1,8 +1,21 @@
+import { useState } from 'react'
 import { RefreshCw, Copy, Bell } from 'lucide-react'
 
 import './WalletHeader.css'
 
 function WalletHeader() {
+  const [refreshing, setRefreshing] = useState(false)
+
+  const handleRefresh = () => {
+    if (refreshing) return
+
+    setRefreshing(true)
+
+    window.setTimeout(() => {
+      setRefreshing(false)
+    }, 800)
+  }
+
   return (
     <header className="wallet-header">
       <div className="wallet-header-title">
@@ -12,12 +25,23 @@ function WalletHeader() {
       </div>
 
       <div className="wallet-header-actions">
-        <button type="button" className="header-action" aria-label="Refresh">
-          <RefreshCw size={18} />
-          <span>Refresh</span>
+        <button
+          type="button"
+          onClick={handleRefresh}
+          disabled={refreshing}
+          aria-label={refreshing ? 'Refreshing wallet' : 'Refresh wallet'}
+          className={
+            refreshing ? 'refresh-button refreshing' : 'refresh-button'
+          }
+        >
+          <RefreshCw size={17} />
         </button>
 
-        <button type="button" className="header-icon-button" aria-label="Copy">
+        <button
+          type="button"
+          className="header-icon-button"
+          aria-label="Copy"
+        >
           <Copy size={18} />
         </button>
 

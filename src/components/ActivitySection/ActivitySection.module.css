@@ -242,3 +242,54 @@
     display: none;
   }
 }
+
+/* Transaction expansion */
+
+.transactionRow {
+  width: 100%;
+  border: none;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.2s ease;
+}
+
+.transactionRow:hover {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.transactionDetails {
+  margin: 0 0 8px 52px;
+  padding: 12px 16px;
+  border-left: 2px solid rgba(122, 92, 255, 0.45);
+  background: rgba(255, 255, 255, 0.025);
+  border-radius: 0 8px 8px 0;
+}
+
+.transactionDetails p {
+  margin: 4px 0;
+  color: #a8b0c5;
+  font-size: 12px;
+}
+
+.transactionDetails strong {
+  color: #ffffff;
+}
+
+/* Transaction status tooltip */
+
+.statusWithInfo {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.status {
+  font-size: 11px;
+  color: #a8b0c5;
+}

@@ -113,3 +113,36 @@
   font-size: 13px;
   font-weight: 700;
 }
+
+.refresh-button {
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.refresh-button:hover:not(:disabled) {
+  transform: rotate(18deg);
+}
+
+.refresh-button.refreshing svg {
+  animation: refreshSpin 0.8s linear infinite;
+}
+
+.refresh-button:disabled {
+  cursor: wait;
+  opacity: 0.7;
+}
+
+@keyframes refreshSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .refresh-button,
+  .refresh-button.refreshing svg {
+    animation: none;
+    transition: none;
+  }
+}
