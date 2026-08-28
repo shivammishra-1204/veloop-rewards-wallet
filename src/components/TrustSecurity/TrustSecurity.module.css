@@ -125,3 +125,18 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* =========================================
+   RESPONSIVE TRUST & SECURITY
+   ========================================= */
+
+@media (max-width: 767px) {
+  .card {
+    padding: 18px;
+  }
+
+  .items {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}

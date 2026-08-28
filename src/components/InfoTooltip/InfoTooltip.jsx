@@ -4,13 +4,13 @@ import styles from './InfoTooltip.module.css'
 function InfoTooltip({ label, children }) {
   return (
     <span className={styles.wrapper}>
-      <button
-        type="button"
+      <span
         className={styles.trigger}
+        role="img"
         aria-label={label}
       >
         <Info size={14} />
-      </button>
+      </span>
 
       <span
         className={styles.tooltip}

@@ -145,3 +145,163 @@
     display: none;
   }
 }
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 1023px) {
+  .sidebar {
+    width: 72px;
+    padding: 20px 8px;
+  }
+
+  .sidebar-brand {
+    justify-content: center;
+    padding: 4px 0 28px;
+  }
+
+  .brand-text {
+    display: none;
+  }
+
+  .brand-logo {
+    width: 36px;
+    height: 36px;
+  }
+
+  .sidebar-link {
+    justify-content: center;
+    padding: 0;
+    gap: 0;
+  }
+
+  .sidebar-link span {
+    display: none;
+  }
+}
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 767px) {
+  .sidebar {
+    width: 100%;
+    height: 64px;
+    min-height: 64px;
+    padding: 0 12px;
+    left: 0;
+    right: 0;
+    top: auto;
+    bottom: 0;
+    border-right: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .sidebar-brand {
+    display: none;
+  }
+
+  .sidebar-nav {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    gap: 4px;
+  }
+
+  .sidebar-link {
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    justify-content: center;
+    border-radius: 10px;
+  }
+
+  .sidebar-link span {
+    display: none;
+  }
+
+  .sidebar-bottom {
+    display: none;
+  }
+}
+
+/* =========================================================
+   MOBILE SIDEBAR → BOTTOM NAVIGATION
+   ========================================================= */
+
+@media (max-width: 600px) {
+  .sidebar {
+    width: 100%;
+    height: 64px;
+    min-height: 64px;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: auto;
+
+    padding: 0 10px;
+
+    border-right: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    z-index: 1000;
+  }
+
+  /* Hide desktop branding */
+  .sidebar-brand {
+    display: none;
+  }
+
+  /* Navigation becomes horizontal */
+  .sidebar-nav {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+
+    gap: 2px;
+  }
+
+  .sidebar-link {
+    height: 48px;
+    min-width: 42px;
+
+    padding: 0 8px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 9px;
+  }
+
+  /* Hide navigation text */
+  .sidebar-link span {
+    display: none;
+  }
+
+  .sidebar-link svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  /* Logout is not needed in bottom navigation */
+  .sidebar-bottom {
+    display: none;
+  }
+}

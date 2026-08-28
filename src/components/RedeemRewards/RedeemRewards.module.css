@@ -201,3 +201,22 @@ button:focus-visible {
     transform: none;
   }
 }
+
+/* =========================================
+   RESPONSIVE REDEEM
+   ========================================= */
+
+@media (max-width: 767px) {
+  .card {
+    padding: 18px;
+  }
+
+  .actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .actions button {
+    width: 100%;
+  }
+}

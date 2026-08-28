@@ -115,34 +115,108 @@
 }
 
 .refresh-button {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+  border: 1px solid #303752;
+  border-radius: 10px;
+
+  background: #151a2b;
+  color: #dce2f5;
+
+  cursor: pointer;
+
+  appearance: none;
+  -webkit-appearance: none;
+
   transition:
-    transform 0.2s ease,
-    opacity 0.2s ease;
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
 }
 
-.refresh-button:hover:not(:disabled) {
-  transform: rotate(18deg);
+.refresh-button:hover {
+  background: #20263b;
+  border-color: #6d5dfc;
+  color: #ffffff;
 }
 
-.refresh-button.refreshing svg {
-  animation: refreshSpin 0.8s linear infinite;
+.refresh-button:active {
+  transform: scale(0.94);
 }
 
 .refresh-button:disabled {
-  cursor: wait;
+  cursor: default;
   opacity: 0.7;
 }
 
-@keyframes refreshSpin {
+/* =========================================================
+   REFRESH ANIMATION
+   ========================================================= */
+
+.refresh-button.refreshing svg {
+  animation: walletRefreshSpin 0.8s linear infinite;
+}
+
+@keyframes walletRefreshSpin {
+  from {
+    transform: rotate(0deg);
+  }
+
   to {
     transform: rotate(360deg);
   }
 }
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
 
-@media (prefers-reduced-motion: reduce) {
-  .refresh-button,
-  .refresh-button.refreshing svg {
-    animation: none;
-    transition: none;
+@media (max-width: 600px) {
+  .wallet-header {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 12px;
+  }
+
+  .wallet-header-title {
+    min-width: 0;
+    flex: 1;
+  }
+
+  .wallet-header-title h1 {
+    font-size: 24px;
+    line-height: 1.1;
+  }
+
+  .wallet-header-title p {
+    font-size: 12px;
+    line-height: 1.4;
+  }
+
+  .wallet-header-actions {
+    flex-shrink: 0;
+    gap: 6px;
+  }
+
+  .wallet-header-actions .refresh-button,
+  .wallet-header-actions .header-icon-button {
+    width: 34px;
+    height: 34px;
+  }
+
+  .header-profile {
+    display: none;
   }
 }

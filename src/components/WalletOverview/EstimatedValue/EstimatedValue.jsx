@@ -1,5 +1,6 @@
 import { ShieldCheck, Star, Info, ArrowRight } from 'lucide-react'
 import styles from './EstimatedValue.module.css'
+import InfoTooltip from '/src/components/InfoTooltip/InfoTooltip'
 
 function EstimatedValue() {
   return (
@@ -8,7 +9,9 @@ function EstimatedValue() {
 
       <div className={styles.heading}>
         <span>TOTAL REWARD VALUE</span>
-        <Info size={15} />
+        <InfoTooltip label="VEs information">
+          This is total reward value in VELOOP Rewards.
+        </InfoTooltip>
       </div>
 
       <div className={styles.value}>≈ ₹25.67</div>

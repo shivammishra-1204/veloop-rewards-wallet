@@ -181,3 +181,63 @@
   align-items: center;
   gap: 7px;
 }
+
+/* =========================================
+   RESPONSIVE REWARD COMPOSITION
+   ========================================= */
+
+@media (max-width: 767px) {
+  .card {
+    padding: 18px;
+  }
+
+  .rewardItem {
+    gap: 10px;
+  }
+
+  .rewardInfo strong {
+    font-size: 12px;
+  }
+
+  .rewardInfo span {
+    font-size: 10px;
+  }
+
+  .amount,
+  .amountSilver {
+    font-size: 14px;
+  }
+
+  .flow {
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .flowItem {
+    gap: 5px;
+    font-size: 11px;
+  }
+
+  .description {
+    font-size: 11px;
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 420px) {
+  .flow {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr auto 1fr;
+    gap: 4px;
+  }
+
+  .flowItem {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .flow > svg {
+    align-self: center;
+  }
+}
